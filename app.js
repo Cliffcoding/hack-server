@@ -38,10 +38,7 @@ app.get('/', (req, res, next) => {
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors({
-	credentials: true,
-	origin: process.env.CORS_ORIGIN
-}));
+app.use(cors());
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
