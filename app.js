@@ -26,6 +26,7 @@ app.get('/', (req, res, next) => {
   if (!error && response.statusCode == 200) {
     var info = JSON.parse(body);
     console.log(info);
+    res.json(info)
     // console.log(info.forks_count + " Forks");
   }
 }
